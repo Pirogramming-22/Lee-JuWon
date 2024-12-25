@@ -207,29 +207,81 @@
             border-radius: 33px;
             text-align: left;
           }
-          #search > form > input {
-            width: 480px;
+          #search-svg {
+            display: inline-block;
+            width: 68px;
+            margin-right: 12px;
             height: 100%;
+            padding-left: 10px;
+          }
+          #search-svg img {
+            width: 24px;
+            height: 24px;
+            fill: #03c75a;
+          }
+          #search-input {
+            width: 480px;
             padding: 17px 0;
+            line-height: 24px;
+            font-weight: bold;
             border: none;
             outline: none;
           }
-          #search > form a {
-            width: 68px;
-            height: 100%;
-            padding: 17px;
-            margin-right: 12px;
+          #search-right {
+            display: inline-block;
+          }
+          #search-keyboard::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -148px -301px;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 14px;
+          }
+          #search-recent::before {
+            content: "";
+            display: block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -154px -211px;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 6px;
+          }
+          #search-button::before {
+            content: "";
+            display: inline-block;
+            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.eae24523.png);
+            background-size: 452px 436px;
+            background-position: -405px -79px;
+            background-repeat: no-repeat;
+            width: 25px;
+            height: 25px;
           }
         </style>
         <div id="search">
           <form action="">
-            <a href="#">
-              <img src="https://s.pstatic.net/static/www/mobile/edit/20241218_1095/upload_1734493987788oYWfZ.png" width="56" height="52" alt="NAVER" />
+            <a id="search-svg" href="#">
+              <img src="https://s.pstatic.net/static/www/mobile/edit/20241218_1095/upload_1734493987788oYWfZ.png" alt="NAVER" />
             </a>
-
-            <label for="search-input" class="blind">검색창</label>
-            <input id="search-input" type="text" />
-            <button class="blind">검색</button>
+            <label for="search-input" class="blind">검색어 입력</label>
+            <input id="search-input" type="text" placeholder="검색어를 입력하세요." />
+            <div id="search-right">
+              <button href="#" id="search-keyboard">
+                <span class="blind">입력도구</span>
+              </button>
+              <button href="#" id="search-recent">
+                <span class="blind">자동완성/최근검색어펼치기</span>
+              </button>
+              <button href="#" id="search-button">
+                <span class="blind">자동완성/최근검색어펼치기</span>
+              </button>
+            </div>
+            <button class="blind">
+              <div><span lass="blind">검색</span></div>
+            </button>
           </form>
         </div>
         <div id="nav"></div>
