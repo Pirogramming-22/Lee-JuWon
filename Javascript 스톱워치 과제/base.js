@@ -20,23 +20,35 @@ document.addEventListener("DOMContentLoaded", () => {
         circle.appendChild(img);
       }
     }
+
+    const circles = document.querySelectorAll(".recordbox_middle_circle");
+    const allChecked = Array.from(circles).every((circle) => circle.querySelector("img"));
+    const topCheckImage = recordBoxTopCircle.querySelector("img");
+
+    if (allChecked && !topCheckImage) {
+      const img = document.createElement("img");
+      img.src = "./check.svg";
+      img.width = 25;
+      img.height = 25;
+      img.style.margin = "auto";
+      recordBoxTopCircle.appendChild(img);
+    } else if (!allChecked && topCheckImage) {
+      topCheckImage.remove();
+    }
   });
 
-  // recordbox_top_circle 클릭하면 아래에도 체크표시 생기도록함.
   if (recordBoxTopCircle) {
     recordBoxTopCircle.addEventListener("click", () => {
       const checkImage = recordBoxTopCircle.querySelector("img");
       const circles = document.querySelectorAll(".recordbox_middle_circle");
 
       if (checkImage) {
-        // 이미 있으면 모두 삭제
         checkImage.remove();
         circles.forEach((circle) => {
           const circleCheckImage = circle.querySelector("img");
           if (circleCheckImage) circleCheckImage.remove();
         });
       } else {
-        // 체크 이미지가 없으면 모두 추가
         const img = document.createElement("img");
         img.src = "./check.svg";
         img.width = 25;
@@ -58,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 쓰레기통 관련 js
+  /* 쓰레기통 관련 js */
   if (trashcanIcon) {
     trashcanIcon.addEventListener("click", () => {
       const records = document.querySelectorAll(".recordbox_middle_box");
