@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pirogrammin StopWatch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="base.js"></script>
+  </head>
+  <body>
+    <div class="body_all">
+      <section class="title">
+        <img src="./stopwatch-fill.svg" width="33" height="33" />
+        <span>피로그래밍 스톱워치</span>
+      </section>
+
+      <!--main-->
+      <section class="main">
+        <div class="stopwatch">
+          <div class="stopwatch_number">01:74</div>
+
+          <div class="buttons">
+            <button class="start">start</button>
+            <button class="stop">stop</button>
+            <button class="reset">reset</button>
+          </div>
+        </div>
+      </section>
+
+      <!--record-->
+      <section class="record">
+        <div class="recordbox">
+          <div class="recordbox_top">
+            <button class="recordbox_top_circle">
+              <!-- <img src="./check.svg" height="25" width="25"> -->
+            </button>
+            <div class="recordbox_top_title">구간 기록</div>
+            <div class="recordbox_top_trashcan"><div class="recordbox_top_trashcan">
+              <svg
+                id="trashcan-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="black"
+                viewBox="0 0 16 16"
+                onClick="toggleTrashColor(this)"
+              >
+                <path
+                  d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+                />
+              </svg>
+            </div>
+            </div>
+          </div>
+          <div class="recordbox_middle">
+            <div class="recordbox_middle_box">
+              <button class="recordbox_middle_circle">
+              </button>
+              <div class="recordbox_middle_time">01:74</div>
+            </div>
+          </div>
+          </div>
+        </section> 
+      </div>
+    </div>
+  </body>
+</html>
