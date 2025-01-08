@@ -1,11 +1,11 @@
-/* h1 a {
+h1 a {
+  color: #fca205;
+}
+
+h1 a {
   color: #fca205;
   font-family: "Lobster";
 }
-
-body {
-  padding-left: 15px;
-} */
 
 .page-header {
   background-color: #ff9400;
@@ -62,38 +62,4 @@ h4 {
 .post h1 a,
 .post h1 a:visited {
   color: #000000;
-}
-
-.post {
-  position: relative; /* 상대 위치를 기준으로 */
-  margin-bottom: 70px;
-}
-
-.post h1 {
-  display: inline-block; /* 제목과 날짜를 같은 줄에 배치 */
-  margin: 0;
-  vertical-align: middle; /* 수직 정렬 */
-  float: left;
-}
-
-.post .date {
-  position: absolute; /* 부모인 post를 기준으로 절대 위치 */
-  top: 0; /* 상단에 위치 */
-  right: 80px; /* 오른쪽 여백 (플러스 버튼과 간격 조정) */
-  vertical-align: middle; /* 수직 정렬 */
-  color: #828282;
-  font-size: 12pt; /* 글자 크기 */
-}
-
-.post .save {
-  position: absolute; /* 부모인 post를 기준으로 절대 위치 */
-  top: 0; /* 상단에 위치 */
-  right: 20px; /* 플러스 버튼과 같은 줄에 위치 */
-  vertical-align: middle;
-  font-size: 12pt; /* 버튼 크기 */
-  color: #828282;
-}
-
-p {
-  margin-top: 25px;
 }
