@@ -1,0 +1,179 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  border-bottom: 2px solid;
+  border-bottom-color: gray;
+
+  background-color: rgb(245, 236, 223);
+}
+
+.header_all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.header_img_box2 {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 2px solid gray;
+
+  background-color: rgb(246, 234, 191);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 20px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header_img_box1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+
+  background-color: rgb(246, 234, 191);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title {
+  font-size: 70px;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+.movie_write_review {
+  display: flex;
+  flex-direction: row;
+
+  float: right;
+
+  margin: 20px;
+  margin-right: 20px;
+
+  position: relative;
+}
+
+.movie_write_review img {
+  margin-right: 5px;
+}
+
+.movie_write_review_text {
+  font-size: 20px;
+}
+
+.review_detail {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.review_detail_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review_detail_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.review_detail_right {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.review_detail_mod1 {
+  font-size: 12px;
+  color: gray;
+
+  margin-right: 10px;
+}
+
+.review_detail_mod2 {
+  font-size: 12px;
+  color: gray;
+}
+
+.review_detail_content_box {
+  display: flex;
+  flex-direction: row;
+
+  width: 1400px;
+  /* height: 250px; */
+  position: relative;
+
+  margin-top: 20px;
+
+  background-color: rgb(225, 225, 225);
+}
+
+.review_detail_content_img img {
+  width: 150px;
+  height: 200px;
+
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.review_detail_content_text {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin-left: 20px;
+}
+
+.review_detail_context_text1 {
+  font-size: 16px;
+
+  color: gray;
+
+  margin-bottom: 8px;
+}
+
+.text_black {
+  color: black;
+}
+
+.review_detail_content_explain {
+  width: 1400px;
+  position: relative;
+
+  margin-top: 20px;
+
+  background-color: rgb(225, 225, 225);
+}
+
+.review_detail_content_explain_text {
+  margin: 15px;
+}

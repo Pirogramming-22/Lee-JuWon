@@ -1,0 +1,114 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  border-bottom: 2px solid;
+  border-bottom-color: gray;
+
+  background-color: rgb(245, 236, 223);
+}
+
+.header_all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.header_img_box2 {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 2px solid gray;
+
+  background-color: rgb(246, 234, 191);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 20px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header_img_box1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+
+  background-color: rgb(246, 234, 191);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title {
+  font-size: 70px;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+.movie_write_review {
+  display: flex;
+  flex-direction: row;
+
+  float: right;
+
+  margin: 20px;
+  margin-right: 20px;
+
+  position: relative;
+}
+
+.movie_write_review img {
+  margin-right: 5px;
+}
+
+.movie_write_review_text {
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+
+  width: 500px;
+  background-color: rgb(225, 225, 225);
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  margin-left: 550px;
+}
+
+.form_all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_all > div {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form_save button {
+  display: flex;
+  float: right;
+}

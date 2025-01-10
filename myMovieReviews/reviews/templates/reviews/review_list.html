@@ -1,0 +1,52 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'reviews/css/review_list.css' %}" />
+    <title>리뷰 리스트 페이지</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="header_all">
+        <div class="header_img_box2">
+          <div class="header_img_box1">
+            <img src="{% static 'reviews/img/camera-reels-fill.svg' %}" width="58" height="58" />
+          </div>
+        </div>
+
+        <span class="header_title"><a href="/">My Movie Reviews</a></span>
+      </div>
+
+      <div class="movie_write_review">
+        <a href="{% url 'review_write' %}">
+          <img src="{% static 'reviews/img/pencil-square.svg' %}" width="20" height="20" />
+          <span class="movie_write_review_text">Write More</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="list_all">
+      {% for review in reviews %}
+      <div class="movie_list1">
+        <div class="movie_list_img">
+          <a href="{% url 'review_detail' review.id %}">
+            <img src="{% static 'reviews/img/movie1.jpeg' %}" />
+          </a>
+        </div>
+        <div class="list_text">
+          <span class="list_text_title">
+            <a href="{% url 'review_detail' review.id %}">{{ review.title }}</a>
+          </span>
+          <span class="list_text_year"> 개봉년도: <span class="text_black">{{ review.release_year }}</span> </span>
+          <span class="list_text_year"> 장르: <span class="text_black">{{ review.genre }}</span> </span>
+          <span class="list_text_year"> 별점: <span class="text_black">{{ review.rating }}</span> </span>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </body>
+</html>
