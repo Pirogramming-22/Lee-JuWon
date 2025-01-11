@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'reviews/css/review_detail.css' %}" />
+    <title>{{ review.title }}</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="header_all">
+        <div class="header_img_box2">
+          <div class="header_img_box1"><img src="{% static 'reviews/img/camera-reels-fill.svg' %}" width="58" height="58" /></div>
+        </div>
+
+        <span class="header_title"><a href="/">My Movie Reviews</a></span>
+      </div>
+
+      <div class="movie_write_review">
+        <a href="{% url 'review_write' %}">
+          <img src="{% static 'reviews/img/pencil-square.svg' %}" width="20" height="20" />
+          <span class="movie_write_review_text">Write More</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="review_detail">
+      <div class="review_detail_top">
+        <span class="review_detail_title">{{ review.title }}</span>
+
+        <div class="review_detail_right">
+          <span class="review_detail_mod1"><a href="{% url 'review_edit' review.id %}">수정</a></span>
+          <span class="review_detail_mod2"><a href="{% url 'review_delete' review.id %}">삭제</a></span>
+        </div>
+      </div>
+
+      <div class="review_detail_content_box">
+        <div class="review_detail_content_img">
+          <img src="{% static 'reviews/img/movie1.jpeg' %}" />
+        </div>
+
+        <div class="review_detail_content_text">
+          <span class="review_detail_context_text1"> 개봉년도: <span class="text_black">{{ review.release_year }}</span> </span>
+          <span class="review_detail_context_text1"> 감독: <span class="text_black">{{ review.director }}</span> </span>
+          <span class="review_detail_context_text1"> 주연: <span class="text_black">{{ review.actors }}</span> </span>
+          <span class="review_detail_context_text1"> 장르: <span class="text_black">{{ review.genre }}</span> </span>
+          <span class="review_detail_context_text1"> 별점: <span class="text_black">{{ review.rating }}</span> </span>
+          <span class="review_detail_context_text1"> 러닝타임: <span class="text_black">{{ review.running_time }}</span> </span>
+        </div>
+      </div>
+
+      <div class="review_detail_content_explain">
+        <div class="review_detail_content_explain_text">{{ review.content }}</div>
+      </div>
+    </section>
+  </body>
+</html>
