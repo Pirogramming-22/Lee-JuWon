@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/addIdea.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jersey+15&family=Sunflower:wght@300&display=swap" rel="stylesheet" />
+
+    <title>AddIdea</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="header_left">
+        <a href="{% url 'main_page' %}">
+          <img src="{% static 'img/lightbulb.svg' %}" width="30" height="30" />
+          <span class="header_left_text">My Idea Site</span>
+        </a>
+      </div>
+
+      <div class="header_right">
+        <span class="header_right_text"><a href="{% url 'add_idea' %}">Add Idea</a></span>
+        <span class="header_right_text"><a href="{% url 'main_page' %}">Manage Ideas</a></span>
+        <span class="header_right_text"><a href="{% url 'add_tool' %}">Add Tool</a></span>
+        <span class="header_right_text"><a href="{% url 'manage_tools' %}">Manage Tools</a></span>
+      </div>
+    </section>
+
+    <section class="bodyAll">
+      <div class="bodybox">
+        <div class="body_top">
+          <div class="body_top_box">
+            <span class="body_top_title">Add Idea</span>
+            <span class="body_top_explain">아이디어 등록 페이지입니다. 당신의 아이디어를 잊지 말고 기록하세요 !</span>
+          </div>
+        </div>
+
+        <div class="body_form">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="title">
+              <span>아이디어명: </span>
+              <input class="input_box" type="text" name="title" />
+            </div>
+            <div class="image">
+              <span class="span_small">Image: </span>
+              <input class="input_box" type="file" name="image" />
+            </div>
+            <div class="explain">
+              <span class="span_large">아이디어 설명: </span><br />
+              <textarea class="input_box" name="description" rows="6" cols="50"></textarea>
+            </div>
+            <div class="like">
+              <span class="span_large">아이디어 관심도: </span>
+              <input class="input_box" type="number" name="interest" min="0" />
+            </div>
+            <div class="tool">
+              <span>예상 개발툴: </span>
+              <select class="input_box" name="dev_tool">
+                <option value="">----------</option>
+                {% for tool in tools %}
+                <option value="{{ tool.title }}">{{ tool.title }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form_submit">
+              <button type="submit">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

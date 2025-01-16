@@ -1,0 +1,339 @@
+:root {
+  --main-font: "IBM Plex Sans KR", sans-serif;
+  --secondary-font: "Jersey 15", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: #96bdd6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  border-bottom: 2px solid;
+  border-bottom-color: gray;
+
+  background-color: #b9d8eb;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-family: var(--secondary-font);
+}
+
+.header span {
+  font-family: var(--secondary-font);
+}
+
+.header_right span:hover,
+.header_left:hover {
+  transform: scale(1.03);
+  transition: transform 300ms ease;
+}
+
+.header_left {
+  display: flex;
+  flex-direction: row;
+
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.header_left img {
+  padding-right: 5px;
+}
+.header_left_text {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header_right_text {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin-top: 2px;
+}
+
+/* 여기까지 고정 */
+
+.bodyAll {
+  display: flex;
+  justify-content: center;
+}
+
+.bodybox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  width: 1300px;
+  height: 560px;
+
+  background-color: rgba(255, 254, 254, 0.3);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  margin-top: 37px;
+}
+
+.body_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 20px;
+}
+
+.body_top_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 300px;
+  height: 95px;
+
+  background-color: none;
+  border: 1px solid #0e4d77;
+  border-radius: 4px;
+}
+
+.body_top_title {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #1773b0;
+
+  transition: transform 300ms ease;
+}
+
+.body_top_explain {
+  font-size: 15px;
+}
+
+/* body top이라 필요한 부분들 여기까지 */
+
+.btn-decrease,
+.btn-increase {
+  all: unset;
+  cursor: pointer;
+}
+
+.btn-decrease:hover,
+.btn-increase {
+  cursor: pointer;
+}
+
+.body_dropdown {
+  position: relative;
+  display: flex;
+
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* 드롭다운 버튼 스타일 */
+.dropdown_button {
+  background-color: #ebf4fa;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--main-font);
+}
+
+.dropdown_button:hover {
+  background-color: #91bad4;
+}
+
+/* 드롭다운 콘텐츠 */
+.dropdown_content {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  top: 100%; /* 버튼 바로 아래에 표시 */
+  right: 0; /* 부모 요소의 오른쪽에 정렬 */
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* 드롭다운 링크 스타일 */
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown_content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* 드롭다운 활성화 */
+.body_dropdown:hover .dropdown_content {
+  display: block;
+}
+
+/* body_content */
+
+.body_content_all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.body_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 330px;
+
+  background-color: #d7e8f3;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.body_content:hover {
+  transform: scale(1.03);
+  transition: transform 300ms ease;
+}
+
+.body_content_imgbox {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.body_content_imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body_content_text {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 15px;
+
+  margin-top: 20px;
+}
+
+.body_content_text > div {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.body_content_text_title {
+  font-size: 17px;
+  font-weight: bold;
+
+  border-bottom: 2px solid;
+  border-bottom-color: gray;
+}
+
+.body_content_text_title_span {
+  margin-bottom: 5px;
+}
+
+.body_bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+}
+
+.body_bottom_goleft {
+  transform: rotate(180deg);
+
+  margin-top: 4px;
+
+  margin-right: 5px;
+}
+
+.body_bottom_goright {
+  margin-left: 5px;
+}
+
+.body_bottom_number {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/* 이미지 상단에 별 아이콘 배치 */
+.body_content_imgbox {
+  position: relative; /* 별 아이콘 위치를 이미지 기준으로 설정 */
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.body_content_imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.star-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* 별 모양 */
+  cursor: pointer;
+  border: 2px solid #ccc; /* 기본 테두리 */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.star-icon.clicked {
+  background-color: yellow; /* 클릭된 상태에서 별을 노란색으로 채우기 */
+  border-color: yellow; /* 테두리 색도 노란색으로 */
+}
