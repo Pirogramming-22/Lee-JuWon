@@ -1,0 +1,181 @@
+:root {
+  --main-font: "IBM Plex Sans KR", sans-serif;
+  --secondary-font: "Jersey 15", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: #96bdd6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  border-bottom: 2px solid;
+  border-bottom-color: gray;
+
+  background-color: #b9d8eb;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-family: var(--secondary-font);
+}
+
+.header span {
+  font-family: var(--secondary-font);
+}
+
+.header_right span:hover,
+.header_left:hover {
+  transform: scale(1.03);
+  transition: transform 300ms ease;
+}
+
+.header_left {
+  display: flex;
+  flex-direction: row;
+
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.header_left img {
+  padding-right: 5px;
+}
+.header_left_text {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header_right_text {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin-top: 2px;
+}
+
+/* 여기까지 고정 */
+
+.bodyAll {
+  display: flex;
+  justify-content: center;
+}
+
+.bodybox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  width: 1300px;
+  height: 560px;
+
+  background-color: rgba(255, 254, 254, 0.3);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  margin-top: 32px;
+}
+
+.body_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 20px;
+}
+
+.body_top_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 560px;
+  height: 95px;
+
+  background-color: none;
+  border: 1px solid #0e4d77;
+  border-radius: 4px;
+}
+
+.body_top_title {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #1773b0;
+
+  transition: transform 300ms ease;
+}
+
+.body_top_explain {
+  font-size: 15px;
+}
+
+/* 여기까지 */
+
+.body_list_all {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 14px;
+}
+
+.body_list1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1000px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  border-top: 1px solid #0e4d77;
+  border-bottom: 1px solid #0e4d77;
+
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.title {
+  flex: 1;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.middle {
+  flex: 1.5;
+  font-size: 15px;
+}
+
+.explain {
+  flex: 3;
+  font-size: 14px;
+  color: gray;
+}
